@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciamento de Tabelas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Gerenciamento de Tabelas</h1>
+
+      <!-- Formulário para inserir registros na tabela Pessoas -->
+      <h2>Inserir Registro em Pessoas</h2>
+      <form id="pessoas-form">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" required />
+        <button type="submit">Inserir</button>
+      </form>
+
+      <!-- Formulário para inserir registros na tabela Enderecos -->
+      <h2>Inserir Registro em Enderecos</h2>
+      <form id="enderecos-form">
+        <label for="pessoa_id">Pessoa ID:</label>
+        <input type="number" id="pessoa_id" name="pessoa_id" required />
+        <label for="rua">Rua:</label>
+        <input type="text" id="rua" name="rua" required />
+        <button type="submit">Inserir</button>
+      </form>
+
+      <!-- Formulário para realizar SELECT -->
+      <h2>Realizar SELECT</h2>
+      <form id="select-form">
+        <label for="tabela">Tabela:</label>
+        <select id="tabela" name="tabela" required>
+          <option value="Pessoas">Pessoas</option>
+          <option value="Enderecos">Enderecos</option>
+          <option value="PessoasEnderecos">Endereço da Pessoa</option>
+        </select>
+        <label for="campos">Campos:</label>
+        <input type="text" id="campos" name="campos" required />
+        <button type="submit">Executar SELECT</button>
+      </form>
+
+      <!-- Resultado do SELECT -->
+      <h2>Resultado do SELECT</h2>
+      <pre id="select-result"></pre>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
